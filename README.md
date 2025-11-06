@@ -143,11 +143,7 @@ cargo test --workspace
 Test the no-std code paths separately:
 
 ```bash
-# Run no-std integration tests
 cargo test --package justcode-core --test no_std_integration --no-default-features --features derive
-
-# Or use the test script
-./scripts/test_no_std.sh
 ```
 
 The no-std tests verify that the conditionally compiled Vec implementations work correctly without the `std` feature.

@@ -6,11 +6,6 @@
 //! ```bash
 //! cargo test --package justcode-core --test no_std_integration --no-default-features --features derive
 //! ```
-//!
-//! Or use the test script:
-//! ```bash
-//! ./scripts/test_no_std.sh
-//! ```
 
 #![cfg(not(feature = "std"))]
 #![no_std]

@@ -25,21 +25,25 @@ Current test coverage: **93.84%** (274/292 lines)
 ## Running Tests
 
 ### All Tests
+
 ```bash
 cargo test --workspace
 ```
 
 ### Integration Tests Only
+
 ```bash
 cargo test --workspace --test integration_tests
 ```
 
 ### No-Std Tests
+
 ```bash
 cargo test --workspace --test no_std_tests
 ```
 
 ### With Coverage
+
 ```bash
 cargo tarpaulin --workspace --out Html --exclude-files '*/tests/*' '*/examples/*' 'justcode-derive/*'
 ```
@@ -51,12 +55,9 @@ The no-std Vec implementations (lines 211-215, 217, 223-228, 230 in `encode.rs`)
 ### Running No-Std Tests
 
 To test no-std code paths:
-```bash
-# Run no-std integration tests
-cargo test --package justcode-core --test no_std_integration --no-default-features --features derive
 
-# Or use the test script
-./scripts/test_no_std.sh
+```bash
+cargo test --package justcode-core --test no_std_integration --no-default-features --features derive
 ```
 
 ### No-Std Test Suite
@@ -94,36 +95,42 @@ The remaining uncovered lines (6.16%) are:
 ## Test Categories
 
 ### Primitive Types
+
 - All integer types (u8-u64, i8-i64, usize)
 - Floating point (f32, f64)
 - Boolean and char
 - Edge cases (invalid char, invalid UTF-8)
 
 ### Collections
+
 - Vec (empty, small, large)
 - Option (Some, None)
 - String and &str
 - &[u8]
 
 ### Complex Types
+
 - Tuples (1-4 elements)
 - Arrays (0-32 elements)
 - Nested structures
 - Structs with Vec fields
 
 ### Configuration
+
 - Standard config
 - With size limits
 - With/without varint encoding
 - Config chaining
 
 ### Error Handling
+
 - Unexpected end of input
 - Size limit exceeded
 - Invalid varint
 - Invalid UTF-8
 
 ### Streaming API
+
 - Writer API
 - Reader API
 - Multiple values in stream
@@ -136,4 +143,3 @@ The remaining uncovered lines (6.16%) are:
 - **Gap**: 1.16% (mostly conditionally compiled no-std code)
 
 The remaining uncovered code is primarily conditionally compiled no-std implementations that are functionally identical to their std counterparts and are tested indirectly.
-
