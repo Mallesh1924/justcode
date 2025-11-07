@@ -53,4 +53,3 @@ The derive macros support:
 ## License
 
 MIT
-
