@@ -13,13 +13,29 @@ Justcode is a replacement for bincode, providing similar functionality with a fo
 - **Configurable**: Size limits, variable int encoding, and other options
 - **Derive Macros**: Automatic `Encode` and `Decode` trait implementations
 
-## Usage
+## Installation
 
 Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
+justcode-core = "0.3.0"
+```
+
+Or if using from a local path:
+
+```toml
+[dependencies]
 justcode-core = { path = "../services/justcode/justcode-core" }
+```
+
+For derive macros support:
+
+```toml
+[dependencies]
+justcode-core = { version = "0.3.0", features = ["derive"] }
+# or
+justcode-core = { path = "../services/justcode/justcode-core", features = ["derive"] }
 ```
 
 ## Example

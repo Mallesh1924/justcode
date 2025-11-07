@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "justcode-python"
-version = "0.2.0"
+version = "0.3.0"
 description = "Python bindings for justcode binary encoder/decoder"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -43,7 +43,7 @@ dev = [
 ]
 
 [tool.maturin]
-module-name = "justcode_python"
+module-name = "justcode"
 manifest-path = "Cargo.toml"
 
 [tool.black]

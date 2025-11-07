@@ -228,28 +228,17 @@ dependencies = [
 
 [[package]]
 name = "justcode-core"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "anyhow",
  "criterion",
- "justcode-derive 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "justcode-derive",
  "thiserror",
 ]
 
 [[package]]
 name = "justcode-derive"
-version = "0.2.0"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "justcode-derive"
-version = "0.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fef4bf7fb88729bc13ddf1858a6e030b896b51a082cccf976763bf484cddb63d"
+version = "0.3.0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -258,7 +247,7 @@ dependencies = [
 
 [[package]]
 name = "justcode-python"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "justcode-core",
  "pyo3",
@@ -412,9 +401,9 @@ dependencies = [
 
 [[package]]
 name = "quote"
-version = "1.0.41"
+version = "1.0.42"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ce25767e7b499d1b604768e7cde645d14cc8584231ea6b295e9c9eb22c02e1d1"
+checksum = "a338cc41d27e6cc6dce6cefc13a0729dfbb81c262b1f519331575dd80ef3067f"
 dependencies = [
  "proc-macro2",
 ]

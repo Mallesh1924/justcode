@@ -290,11 +290,11 @@ fn decode(data: &Bound<PyAny>, config: Option<PyConfig>, target_type: Option<&st
 
 /// Python module definition
 #[pymodule]
-fn justcode_python(_py: Python, m: &Bound<PyModule>) -> PyResult<()> {
+fn justcode(_py: Python, m: &Bound<PyModule>) -> PyResult<()> {
     m.add_class::<PyConfig>()?;
     m.add_function(wrap_pyfunction!(encode, m)?)?;
     m.add_function(wrap_pyfunction!(decode, m)?)?;
-    m.add("__version__", "0.2.0")?;
+    m.add("__version__", "0.3.0")?;
     Ok(())
 }
 

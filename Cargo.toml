@@ -7,7 +7,7 @@ members = [
 resolver = "2"
 
 [workspace.package]
-version = "0.2.0"
+version = "0.3.0"
 edition = "2024"
 authors = ["Reynard Contributors"]
 license = "MIT"
@@ -21,7 +21,7 @@ anyhow = "1.0.100"
 
 # Derive macros
 syn = { version = "2.0", features = ["full"] }
-quote = "1.0"
+quote = "1.0.42"
 proc-macro2 = "1.0"
 
 # Testing
